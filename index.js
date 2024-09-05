@@ -25,7 +25,7 @@ app.use(checkUserAuthentication);
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
 
-app.use("/url", restrictTo(["NORMAL"]), urlRoute);
+app.use("/url", restrictTo(["NORMAL", "ADMIN"]), urlRoute);
 app.use("/", staticRoute);
 app.use("/user", userRoute);
 

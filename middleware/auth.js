@@ -7,7 +7,6 @@ function checkUserAuthentication(req, res, next) {
     }
 
     const token = tokenCookie;
-    console.log(token);
     const user = getUser(token);
 
     req.user = user;

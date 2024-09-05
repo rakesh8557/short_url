@@ -2,9 +2,9 @@ const User = require('../models/users')
 const {setUser} = require("../models/authMap");
 
 const handleUSerSignup = async (req, res) => {
-    const {name, email_Id, password} = req.body
+    const {name, email_Id, password,role} = req.body
     await User.create({
-        name, email_Id, password
+        name, email_Id, password,role
     })
 
     return res.redirect("/");
